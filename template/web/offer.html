@@ -1,0 +1,373 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- Breadcrumb -->
+    <section class="section-breadcrumb margin-b-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row bb-breadcrumb-inner">
+                        <div class="col-md-6 col-sm-12">
+                            <h2 class="bb-breadcrumb-title">Best Offers</h2>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <ul class="bb-breadcrumb-list">
+                                <li class="bb-breadcrumb-item"><a href="index-2.html">Home</a></li>
+                                <li><i class="ri-arrow-right-double-fill"></i></li>
+                                <li class="bb-breadcrumb-item active">Offer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer -->
+    <section class="section-offer padding-tb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title bb-center" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="200">
+                        <div class="section-detail">
+                            <h2 class="bb-title">Our<span> Products</span></h2>
+                            <p>check latest offers for you.</p>
+                        </div>
+                    </div>
+                </div>
+                {% for offer in offers %}
+                <div class="col-xl-3 col-md-4 col-6 mb-24 bb-product-box" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+                    <div class="bb-pro-box">
+                        <div class="bb-pro-img">
+                            <span class="flags">
+                                <span>New</span>
+                            </span>
+                            <a href="javascript:void(0)">
+                                <div class="inner-img">
+                                    <img class="main-img" src="{{offer.image.url}}" alt="product-1">
+                                    <img class="hover-img" src="{{offer.image1.url}}" alt="product-1">
+                                </div>
+                            </a>
+                            <ul class="bb-pro-actions">
+                                <li class="bb-btn-group">
+                                    <a href="javascript:void(0)" title="Wishlist">
+                                        <i class="ri-heart-line"></i>
+                                    </a>
+                                </li>
+                                <li class="bb-btn-group">
+                                    <a href="javascript:void(0)" data-link-action="quickview" title="Quick View"
+                                        data-bs-toggle="modal" data-bs-target="#bry_quickview_modal">
+                                        <i class="ri-eye-line"></i>
+                                    </a>
+                                </li>
+                                <li class="bb-btn-group">
+                                    <a href="compare.html" title="Compare">
+                                        <i class="ri-repeat-line"></i>
+                                    </a>
+                                </li>
+                                <li class="bb-btn-group">
+                                    <a href="javascript:void(0)" title="Add To Cart">
+                                        <i class="ri-shopping-bag-4-line"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="timer1 timer dealend-timer" data-date="September 30, 2025 19:15:10 PDT"></div>
+                        <div class="bb-pro-contact">
+                            <div class="bb-pro-subtitle">
+                                <a href="shop-left-sidebar-col-3.html">{{offer.subname}}</a>
+                                <span class="bb-pro-rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                </span>
+                            </div>
+                            <h4 class="bb-pro-title"><a href="product-left-sidebar.html">{{offer.name}}</a></h4>
+                            <div class="bb-price">
+                                <div class="inner-price">
+                                    <span class="new-price">${{offer.price}}</span>
+                                    <span class="old-price">$22</span>
+                                </div>
+                                <span class="last-items">{{offer.gram}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Day of the deal -->
+  <section class="section-deal padding-tb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title bb-deal" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="section-detail">
+                            <h2 class="bb-title">Black Friday Deals <span>50% Off</span></h2>
+                            <p>Don't wait. The time will never be just right.</p>
+                        </div>
+                        <div id="dealend" class="dealend-timer"></div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="bb-deal-slider">
+                        <div class="bb-deal-block owl-carousel">
+                            <div class="bb-deal-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                <div class="bb-pro-box">
+                                    <div class="bb-pro-img">
+                                        <span class="flags">
+                                            <span>New</span>
+                                        </span>
+                                        <a href="javascript:void(0)">
+                                            <div class="inner-img">
+                                                <img class="main-img" src="{% static "assets/img/product/1.jpg" %}" alt="product-1">
+                                                <img class="hover-img" src="{% static "assets/img/product/back-1.jpg" %}"
+                                                    alt="product-1">
+                                            </div>
+                                        </a>
+                                        <ul class="bb-pro-actions">
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" title="Wishlist">
+                                                    <i class="ri-heart-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" data-link-action="quickview"
+                                                    title="Quick View" data-bs-toggle="modal"
+                                                    data-bs-target="#bry_quickview_modal">
+                                                    <i class="ri-eye-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="compare.html" title="Compare">
+                                                    <i class="ri-repeat-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" title="Add To Cart">
+                                                    <i class="ri-shopping-bag-4-line"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bb-pro-contact">
+                                        <div class="bb-pro-subtitle">
+                                            <a href="shop-left-sidebar-col-3.html">Chocos</a>
+                                            <span class="bb-pro-rating">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                            </span>
+                                        </div>
+                                        <h4 class="bb-pro-title"><a href="product-left-sidebar.html">Mixed Fruits
+                                                Chocolates
+                                                Pack</a>
+                                        </h4>
+                                        <div class="bb-price">
+                                            <div class="inner-price">
+                                                <span class="new-price">$25</span>
+                                                <span class="old-price">$30</span>
+                                            </div>
+                                            <span class="last-items">1 Pack</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bb-deal-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                <div class="bb-pro-box">
+                                    <div class="bb-pro-img">
+                                        <span class="flags">
+                                            <span>Hot</span>
+                                        </span>
+                                        <a href="javascript:void(0)">
+                                            <div class="inner-img">
+                                                <img class="main-img" src="{% static "assets/img/product/2.jpg" %}" alt="product-2">
+                                                <img class="hover-img" src="{% static "assets/img/product/back-2.jpg" %}"
+                                                    alt="product-2">
+                                            </div>
+                                        </a>
+                                        <ul class="bb-pro-actions">
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" title="Wishlist">
+                                                    <i class="ri-heart-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" data-link-action="quickview"
+                                                    title="Quick View" data-bs-toggle="modal"
+                                                    data-bs-target="#bry_quickview_modal">
+                                                    <i class="ri-eye-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="compare.html" title="Compare">
+                                                    <i class="ri-repeat-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" title="Add To Cart">
+                                                    <i class="ri-shopping-bag-4-line"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bb-pro-contact">
+                                        <div class="bb-pro-subtitle">
+                                            <a href="shop-left-sidebar-col-3.html">Juice</a>
+                                            <span class="bb-pro-rating">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                            </span>
+                                        </div>
+                                        <h4 class="bb-pro-title"><a href="product-left-sidebar.html">Organic Apple Juice
+                                                Pack</a></h4>
+                                        <div class="bb-price">
+                                            <div class="inner-price">
+                                                <span class="new-price">$15</span>
+                                                <span class="item-left">3 Left</span>
+                                            </div>
+                                            <span class="last-items">100 ml</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bb-deal-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                                <div class="bb-pro-box">
+                                    <div class="bb-pro-img">
+                                        <a href="javascript:void(0)">
+                                            <div class="inner-img">
+                                                <img class="main-img" src="{% static "assets/img/product/3.jpg" %}" alt="product-3">
+                                                <img class="hover-img" src="{% static "assets/img/product/back-3.jpg" %}"
+                                                    alt="product-3">
+                                            </div>
+                                        </a>
+                                        <ul class="bb-pro-actions">
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" title="Wishlist">
+                                                    <i class="ri-heart-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" data-link-action="quickview"
+                                                    title="Quick View" data-bs-toggle="modal"
+                                                    data-bs-target="#bry_quickview_modal">
+                                                    <i class="ri-eye-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="compare.html" title="Compare">
+                                                    <i class="ri-repeat-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" title="Add To Cart">
+                                                    <i class="ri-shopping-bag-4-line"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bb-pro-contact">
+                                        <div class="bb-pro-subtitle">
+                                            <a href="shop-left-sidebar-col-3.html">Juice</a>
+                                            <span class="bb-pro-rating">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                            </span>
+                                        </div>
+                                        <h4 class="bb-pro-title"><a href="product-left-sidebar.html">Mixed Almond nuts
+                                                juice
+                                                Pack</a>
+                                        </h4>
+                                        <div class="bb-price">
+                                            <div class="inner-price">
+                                                <span class="new-price">$32</span>
+                                                <span class="old-price">$39</span>
+                                            </div>
+                                            <span class="last-items">250 g</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bb-deal-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                                <div class="bb-pro-box">
+                                    <div class="bb-pro-img">
+                                        <span class="flags">
+                                            <span>Sale</span>
+                                        </span>
+                                        <a href="javascript:void(0)">
+                                            <div class="inner-img">
+                                                <img class="main-img" src="{% static "assets/img/product/4.jpg" %}" alt="product-4">
+                                                <img class="hover-img" src="{% static "assets/img/product/back-4.jpg" %}"
+                                                    alt="product-4">
+                                            </div>
+                                        </a>
+                                        <ul class="bb-pro-actions">
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" title="Wishlist">
+                                                    <i class="ri-heart-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" data-link-action="quickview"
+                                                    title="Quick View" data-bs-toggle="modal"
+                                                    data-bs-target="#bry_quickview_modal">
+                                                    <i class="ri-eye-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="compare.html" title="Compare">
+                                                    <i class="ri-repeat-line"></i>
+                                                </a>
+                                            </li>
+                                            <li class="bb-btn-group">
+                                                <a href="javascript:void(0)" title="Add To Cart">
+                                                    <i class="ri-shopping-bag-4-line"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bb-pro-contact">
+                                        <div class="bb-pro-subtitle">
+                                            <a href="shop-left-sidebar-col-3.html">Fruits</a>
+                                            <span class="bb-pro-rating">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                            </span>
+                                        </div>
+                                        <h4 class="bb-pro-title"><a href="product-left-sidebar.html">Fresh Mango Slice
+                                                Juice</a></h4>
+                                        <div class="bb-price">
+                                            <div class="inner-price">
+                                                <span class="new-price">$25</span>
+                                                <span class="item-left">Out Of Stock</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    {% endblock %}

@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blueberry - Multi Purpose eCommerce Template.">
+    <meta name="keywords"
+        content="eCommerce, mart, apparel, bootstrap 5, catalog, fashion, html, multipurpose, online store, shop, store, template">
+    <title>Store</title>
+
+    <!-- Site Favicon -->
+    <link rel="icon" href="assets/img/favicon/favicon.png" type="image/x-icon">
+
+    <!-- Css All Plugins Files -->
+    <link rel="stylesheet" href="{% static "assets/css/vendor/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/remixicon.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/aos.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/swiper-bundle.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/slick.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/animate.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/jquery-range-ui.css" %}">
+
+    <!-- Main Style -->
+    <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+</head>
+
+<body>
+    {% include "web/partials/header.html" %}
+    {% block content %}
+
+    {% endblock %}
+    {% include "web/partials/footer.html" %}
+
+
+<!-- Plugins -->
+<script src="{% static "assets/js/vendor/bootstrap.bundle.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/jquery.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/jquery.zoom.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/aos.js" %}"></script>
+<script src="{% static "assets/js/vendor/swiper-bundle.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/smoothscroll.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/countdownTimer.js" %}"></script>
+<script src="{% static "assets/js/vendor/owl.carousel.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/slick.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/jquery-range-ui.min.js" %}"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the first tab and its content
+        var firstTab = document.querySelector('.bb-pro-tab-nav .nav-item:first-child .nav-link');
+        var firstTabContent = document.querySelector('.tab-content .tab-pane:first-child');
+    
+        // Manually trigger the tab to be active on page load
+        firstTab.classList.add('active');
+        firstTabContent.classList.add('show', 'active');
+    });
+</script>
+<!-- main-js -->
+<script src="{% static "assets/js/main.js" %}"></script>
+</body>
+
+
+
+</html>

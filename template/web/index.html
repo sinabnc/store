@@ -1,0 +1,405 @@
+
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+   
+    <!-- Hero -->
+    <section class="section-hero margin-b-50">
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="hero-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide-1">
+                                <div class="row mb-minus-24">
+                                    <div class="col-lg-6 col-12 order-lg-1 order-2 mb-24">
+                                        <div class="hero-contact">
+                                            <p>Flat 30% Off</p>
+                                            <h1>Explore <span style="color:#999b36">Healthy</span><br> & Fresh Fruits</h1>
+                                            <a href="{% url "product" %}" class="bb-btn-1">Shop Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 order-lg-2 order-1 mb-24">
+                                        <div class="hero-image">
+                                            <img src="{% static "assets/img/file.png" %}" alt="hero">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"
+                                                class="animate-shape">
+                                                <linearGradient id="shape_1" x1="100%" x2="0%" y1="100%" y2="0%">
+                                                </linearGradient>
+                                                <path d="">
+                                                    <animate repeatCount="indefinite" attributeName="d" dur="15s"
+                                                        values="" />
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide-2">
+                                <div class="row mb-minus-24">
+                                    <div class="col-lg-6 col-12 order-lg-1 order-2 mb-24">
+                                        <div class="hero-contact">
+                                            <p>Flat 20% Off</p>
+                                            <h2>Explore <span>Warm</span><br> Fast Food & Snacks</h2>
+                                            <a href="shop-left-sidebar-col-3.html" class="bb-btn-1">Shop Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 order-lg-2 order-1 mb-24">
+                                        <div class="hero-image">
+                                            <img src="{% static "assets/img/hero/hero-2.png" %}" alt="hero">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"
+                                                class="animate-shape">
+                                                <linearGradient id="shape_2" x1="80%" x2="0%" y1="80%" y2="0%">
+                                                </linearGradient>
+                                                <path d="">
+                                                    <animate repeatCount="indefinite" attributeName="d" dur="15s"
+                                                        values="" />
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide-3">
+                                <div class="row mb-minus-24">
+                                    <div class="col-lg-6 col-12 order-lg-1 order-2 mb-24">
+                                        <div class="hero-contact">
+                                            <p>Flat 30% Off</p>
+                                            <h2>Explore <span>Organic</span><br> & Fresh Vegetables</h2>
+                                            <a href="shop-left-sidebar-col-3.html" class="bb-btn-1">Shop Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 order-lg-2 order-1 mb-24">
+                                        <div class="hero-image">
+                                            <img src="{% static "assets/img/hero/hero-3.png" %}" alt="hero">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"
+                                                class="animate-shape">
+                                                <linearGradient id="shape_3" x1="80%" x2="0%" y1="80%" y2="0%">
+                                                </linearGradient>
+                                                <path d="">
+                                                    <animate repeatCount="indefinite" attributeName="d" dur="15s"
+                                                        values="" />
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-white"></div>
+                        <div class="swiper-buttons">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Category -->
+    <section class="section-category padding-tb-50">
+        <div class="container">
+            <div class="row mb-minus-24">
+                <div class="col-lg-5 col-12 mb-24">
+                    <div class="bb-category-img">
+                        <img src="{% static "assets/img/category/category.jpg" %}" alt="category">
+                        <div class="bb-offers">
+                            <span>50% Off</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12 mb-24">
+                    <div class="bb-category-contact">
+                        <div class="category-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                            <h2>Explore Categories</h2>
+                        </div>
+                        <div class="bb-category-block owl-carousel">
+                            <div class="bb-category-box category-items-1" data-aos="flip-left" data-aos-duration="1000"
+                                data-aos-delay="200">
+                                <div class="category-image">
+                                    <img src="{% static "assets/img/seasoning.png" %}" alt="category">
+                                </div>
+                                <div class="category-sub-contact">
+                                    <h5><a href="{% url "product" %}">Spices</a></h5><p>45 items</p>
+                                </div>
+                            </div>
+                            <div class="bb-category-box category-items-2" data-aos="flip-left" data-aos-duration="1000"
+                                data-aos-delay="400">
+                                <div class="category-image">
+                                    <img src="{% static "assets/img/attar.png" %}" alt="category">
+                                </div>
+                                <div class="category-sub-contact">
+                                    <h5><a href="{% url "product" %}">Attar and oud</a></h5>
+                                    <p>21 items</p>
+                                </div>
+                            </div>
+                            <div class="bb-category-box category-items-3" data-aos="flip-left" data-aos-duration="1000"
+                                data-aos-delay="600">
+                                <div class="category-image">
+                                    <img src="{% static "assets/img/woman-clothes.png" %}" alt="category">
+                                </div>
+                                <div class="category-sub-contact">
+                                    <h5><a href="{% url "product" %}">dresses</a></h5>
+                                    <p>49 items</p>
+                                </div>
+                            </div>
+                            <div class="bb-category-box category-items-4" data-aos="flip-left" data-aos-duration="1000"
+                                data-aos-delay="800">
+                                <div class="category-image">
+                                    <img src="{% static "assets/img/amphora.png" %}" alt="category">
+                                </div>
+                                <div class="category-sub-contact">
+                                    <h5><a href="{% url "product" %}">Antiques</a></h5>
+                                    <p>08 items</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Day of the deal -->
+    <section class="section-offer padding-tb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title bb-center" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-delay="200">
+                        <div class="section-detail">
+                            <h2 class="bb-title">Today's<span> Deals</span></h2>
+                            <p>check latest Offers for you.</p>
+                        </div>
+                    </div>
+                </div>
+                {% for product in offers %}
+                <div class="col-xl-3 col-md-4 col-6 mb-24 bb-product-box" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+                    <div class="bb-pro-box">
+                        <div class="bb-pro-img">
+                            <span class="flags">
+                                <span>New</span>
+                            </span>
+                            <a href="javascript:void(0)">
+                                <div class="inner-img">
+                                    <img class="main-img" src="{{product.image.url}}" alt="product-1">
+                                    <img class="hover-img" src="{{product.image1.url}}" alt="product-1">
+                                </div>
+                            </a>
+                            
+                        </div>
+                        <div class="timer1 timer dealend-timer" data-date="September 30, 2025 19:15:10 PDT"></div>
+                        <div class="bb-pro-contact">
+                            <div class="bb-pro-subtitle">
+                                <a href="shop-left-sidebar-col-3.html">{{product.name}}</a>
+                              <a href="https://api.whatsapp.com/send?phone=7356700463&text=Hi, I am interested in the product {{ product.subname }}."><h6 style="color:#FFB200">Buy Now</h6></a>
+                            </div>
+                            <h4 class="bb-pro-title"><a href="product-left-sidebar.html">{{product.subname}}</a></h4>
+                            <div class="bb-price">
+                                <div class="inner-price">
+                                    <span class="new-price">${{product.price}}</span>
+                                    <span class="old-price">$22</span>
+                                </div>
+                                <span class="last-items">{{product.gram}}g</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               {% endfor %}
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner-one -->
+    <section class="section-banner-one padding-tb-50">
+        <div class="container">
+            <div class="row mb-minus-24">
+                <div class="col-lg-6 col-12 mb-24" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="banner-box bg-box-color-one">
+                        <div class="inner-banner-box">
+                            <div class="side-image">
+                                <img src="{% static "assets/img/banner-one/one.png" %}" alt="one">
+                            </div>
+                            <div class="inner-contact">
+                                <h5>Tasty Snack & Fast food</h5>
+                                <p>The flavour of something special</p>
+                                <a href="{% url "product" %}" class="bb-btn-1">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 mb-24" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="banner-box bg-box-color-two">
+                        <div class="inner-banner-box">
+                            <div class="side-image">
+                                <img src="{% static "assets/img/banner-one/two.png" %}" alt="two">
+                            </div>
+                            <div class="inner-contact">
+                                <h5>Fresh Fruits & Vegetables</h5>
+                                <p>A healthy meal for every one</p>
+                                <a href="{% url "product" %}" class="bb-btn-1">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner-two -->
+    <section class="section-banner-two margin-tb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 banner-justify-box-contact">
+                    <div class="banner-two-box">
+                        <span>25% Off</span>
+                        <h4>Fresh & Organic vegetables</h4>
+                        <a href="javascript:void(0)" class="bb-btn-1">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Product tab Area -->
+    <section class="section-product-tabs padding-tb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title bb-deal" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="section-detail">
+                            <h2 class="bb-title">New <span>Arrivals</span></h2>
+                            <p>Shop online for new arrivals and get free shipping!</p>
+                        </div>
+                        <div class="bb-pro-tab">
+                            <ul class="bb-pro-tab-nav nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#all"></a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-minus-24">
+                <div class="col">
+                    <div class="tab-content">
+                        <!-- 1st Product tab start -->
+                        <div class="tab-pane fade" id="all">
+                            <div class="row"> 
+                                {% for product in arrivels %}
+                                <div class="col-xl-3 col-md-4 col-6 mb-24 bb-product-box" data-aos="fade-up" data-aos-duration="1000"
+                                    data-aos-delay="200">
+                                    <div class="bb-pro-box">
+                                        <div class="bb-pro-img">
+                                            <span class="flags">
+                                                <span>New</span>
+                                            </span>
+                                            <a href="javascript:void(0)">
+                                                <div class="inner-img">
+                                                    <img class="main-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                    <img class="hover-img" src="{{ product.image1.url }}" alt="{{ product.subname }}">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="bb-pro-contact">
+                                            <div class="bb-pro-subtitle">
+                                                <a href="shop-left-sidebar-col-3.html">{{ product.name }}</a>
+                                                <a href="https://api.whatsapp.com/send?phone=7356700463&text=Hi, I am interested in the product {{ product.subname }}.">
+                                                    <h6 style="color:#FFB200">Buy Now</h6>
+                                                </a>
+                                            </div>
+                                            <h4 class="bb-pro-title">
+                                                <a href="product-left-sidebar.html">{{ product.subname }}</a>
+                                            </h4>
+                                            <div class="bb-price">
+                                                <div class="inner-price">
+                                                    <span class="new-price">${{ product.price }}</span>
+                                                    <span class="old-price">$22</span>
+                                                </div>
+                                                <span class="last-items">{{ product.gram }}g</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section-services padding-tb-50">
+        <div class="container">
+            <div class="row mb-minus-24">
+                <div class="col-lg-3 col-md-6 col-12 mb-24" data-aos="flip-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+                    <div class="bb-services-box">
+                        <div class="services-img">
+                            <img src="{% static "assets/img/services/1.png" %}" alt="services-1">
+                        </div>
+                        <div class="services-contact">
+                            <h4>Free Shipping</h4>
+                            <p>Free shipping on all Us order or above $200</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-24" data-aos="flip-up" data-aos-duration="1000"
+                    data-aos-delay="400">
+                    <div class="bb-services-box">
+                        <div class="services-img">
+                            <img src="{% static "assets/img/services/2.png" %}" alt="services-2">
+                        </div>
+                        <div class="services-contact">
+                            <h4>24x7 Support</h4>
+                            <p>Contact us 24 hours a day, 7 days a week</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-24" data-aos="flip-up" data-aos-duration="1000"
+                    data-aos-delay="600">
+                    <div class="bb-services-box">
+                        <div class="services-img">
+                            <img src="{% static "assets/img/services/3.png" %}" alt="services-3">
+                        </div>
+                        <div class="services-contact">
+                            <h4>30 Days Return</h4>
+                            <p>Simply return it within 30 days for an exchange</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-24" data-aos="flip-up" data-aos-duration="1000"
+                    data-aos-delay="800">
+                    <div class="bb-services-box">
+                        <div class="services-img">
+                            <img src="{% static "assets/img/services/4.png" %}" alt="services-4">
+                        </div>
+                        <div class="services-contact">
+                            <h4>Payment Secure</h4>
+                            <p>Contact us 24 hours a day, 7 days a week</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+   
+
+    
+
+    <!-- Footer -->
+    
+    {% endblock %}
+    
